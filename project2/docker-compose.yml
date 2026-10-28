@@ -1,0 +1,14 @@
+ services:
+  applications :
+    image : flask-mysql-app1
+    ports:
+      -8000:8000
+    networks:
+      -flask-app-net 
+    depends_on:
+       -db
+    environment:
+       MYSQL_HOST : db
+      MYSQL_HOST            : "3306"        
+        
+      
